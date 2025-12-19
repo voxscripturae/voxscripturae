@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vox Scripturae | In Principio</title>
+    <title>Vox Scripturae</title>
     <style>
         body {
-            background-color: #0f0f0f;
-            color: #d4af37;
+            background-color: #2b1a1a; /* Marrom Profundo */
+            color: #d4af37;           /* Dourado Metálico */
             font-family: 'Times New Roman', serif;
             display: flex;
             flex-direction: column;
@@ -17,20 +17,96 @@
             margin: 0;
             text-align: center;
         }
-        h1 { font-size: 3rem; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px; }
-        p { font-style: italic; font-size: 1.2rem; color: #a0a0a0; }
-        .signature { margin-top: 50px; font-size: 0.9rem; letter-spacing: 2px; color: #d4af37; }
-        .loading { margin-top: 20px; font-size: 0.8rem; color: #444; }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #d4af37;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .audio-section {
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        audio {
+            filter: sepia(100%) saturate(150%) hue-rotate(10deg) brightness(80%);
+            height: 30px;
+            width: 280px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
+
     <h1>Vox Scripturae</h1>
-    <p>"In princípio érat Vérbum..."</p>
-    <div class="signature">
-        A Project by <strong>Clemens Pio</strong><br>
-        Coming Anno Domini MMXXV
+    <p>In princípio érat Vérbum</p>
+
+    <div class="container">
+        <div class="audio-section">
+            <label>Lectio Latina</label>
+            <audio controls>
+                <source src="prologo.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+        </div>
+
+        <div class="audio-section">
+            <label>English Version (RP)</label>
+            <audio controls>
+                <source src="prologo-eng.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="audio-section">
+            <label>Versione Italiana</label>
+            <audio controls>
+                <source src="prologo-ita.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="audio-section">
+            <label>Cantilena Italiana (Marcus)</label>
+            <audio controls>
+                <source src="prologo-ita-cant.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
-    <div class="loading">Resurrecting the Sacred Sound...</div>
+
+    <footer>
+        &copy; 2025 Vox Scripturae - Sampaio, RJ
+    </footer>
+
 </body>
 </html>
-
